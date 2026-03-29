@@ -1,3 +1,14 @@
+const display = document.getElementById('display');
+let currentInput = '';
+let previousInput = '';
+let operator = null;
+let shouldResetDisplay = false;
+
+function divide(a, b) {
+    if (b === 0) {
+        return 'Error: Divide by 0';
+    }
+    return a / b;
 
 
 function add(a, b) {
@@ -27,6 +38,8 @@ function calculate() {
     let num1 = parseFloat(firstNumber);
     let num2 = parseFloat(secondNumber);
 
+    if (operator === '/') {
+        display.value = divide(num1, num2);
     if (operator === '+') {
         display.value = add(num1, num2);
     }
