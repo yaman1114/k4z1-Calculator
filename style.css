@@ -1,0 +1,92 @@
+/* Basic page reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Calculator container */
+.calculator {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 12px;
+    width: 280px;
+    text-align: center;
+}
+
+h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* Display input */
+#display {
+    width: 100%;
+    padding: 12px;
+    font-size: 24px;
+    text-align: right;
+    border: none;
+    border-radius: 8px;
+    background-color: #333;
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* Button grid - 4 columns */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Default button style */
+button {
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #555;
+    color: white;
+}
+
+button:hover {
+    background-color: #777;
+}
+
+/* Operator buttons (+, -, ×, ÷) */
+.operator {
+    background-color: #f39c12;
+}
+
+.operator:hover {
+    background-color: #e67e22;
+}
+
+/* Equals button */
+.equal {
+    background-color: #27ae60;
+}
+
+.equal:hover {
+    background-color: #2ecc71;
+}
+
+/* Clear button - spans all 4 columns */
+.clear {
+    grid-column: span 4;
+    background-color: #e74c3c;
+}
+
+.clear:hover {
+    background-color: #c0392b;
+}
