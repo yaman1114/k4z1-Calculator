@@ -63,6 +63,8 @@ function calculate() {
     let num1 = parseFloat(firstNumber);
     let num2 = parseFloat(secondNumber);
 
+    if (operator === '-') {
+        display.value = subtract(num1, num2);
     if (operator === '*') {
         display.value = multiply(num1, num2);
     }
@@ -82,6 +84,7 @@ function calculate() {
     firstNumber = display.value;
     operator = '';
     operatorSelected = true;
+}
 }
 
 function clearDisplay() {
