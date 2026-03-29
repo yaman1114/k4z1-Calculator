@@ -9,6 +9,10 @@ function divide(a, b) {
         return 'Error: Divide by 0';
     }
     return a / b;
+
+
+function add(a, b) {
+    return a + b;
 }
 
 function appendNumber(num) {
@@ -36,9 +40,19 @@ function calculate() {
 
     if (operator === '/') {
         display.value = divide(num1, num2);
+    if (operator === '+') {
+        display.value = add(num1, num2);
     }
 
     firstNumber = display.value;
     operator = '';
     operatorSelected = true;
+}
+
+function clearDisplay() {
+    document.getElementById('display').value = '';
+    firstNumber = '';
+    secondNumber = '';
+    operator = '';
+    operatorSelected = false;
 }
