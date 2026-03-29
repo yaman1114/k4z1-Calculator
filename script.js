@@ -7,6 +7,17 @@ let shouldResetDisplay = false;
 function multiply(a, b) {
     return a * b;
 }
+function divide(a, b) {
+    if (b === 0) {
+        return 'Error: Divide by 0';
+    }
+    return a / b;
+}
+
+
+function add(a, b) {
+    return a + b;
+}
 
 function appendNumber(num) {
     let display = document.getElementById('display');
@@ -34,8 +45,22 @@ function calculate() {
     if (operator === '*') {
         display.value = multiply(num1, num2);
     }
+    if (operator === '/') {
+        display.value = divide(num1, num2);
+    }
+    if (operator === '+') {
+        display.value = add(num1, num2);
+    }
 
     firstNumber = display.value;
     operator = '';
     operatorSelected = true;
+}
+
+function clearDisplay() {
+    document.getElementById('display').value = '';
+    firstNumber = '';
+    secondNumber = '';
+    operator = '';
+    operatorSelected = false;
 }
